@@ -24,7 +24,7 @@ export async function getStaticProps({
   locale,
 }: GetStaticPropsContext<{ path: string[] }>) {
   const page = await resolveBuilderContent('page', {
-    locale,
+    locale: 'en',
     urlPath: '/' + (params?.path?.join('/') || ''),
   })
   return {
