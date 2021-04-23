@@ -47,7 +47,7 @@ export async function getStaticPaths({ locales }: GetStaticPathsContext) {
   const paths = await getAllCollectionPaths(builderConfig)
   return {
     paths: paths.map((path) => `/collection/${path}`),
-    fallback: 'blocking',
+    fallback: true,
   }
 }
 
